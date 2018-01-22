@@ -9,7 +9,6 @@ import javax.jws.soap.SOAPBinding.Style;
 import javax.jws.soap.SOAPBinding.Use;
 
 import introsde.APP1.parks.persistence.entities.Park;
-import javassist.NotFoundException;
 
 //Service Endpoint Interface
 @WebService
@@ -19,7 +18,7 @@ public interface ParkWebService{
 
 	@WebMethod List<Park> getParkList();
 	@WebMethod Park addPark(Park park);
-	@WebMethod Park updatePark(Park park) throws NotFoundException;
+	@WebMethod Park updatePark(Park park);
 	@WebMethod Park getParkById(Integer id);
 	
 }

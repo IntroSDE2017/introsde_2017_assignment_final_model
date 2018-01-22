@@ -1,0 +1,111 @@
+Id,Nome,Localita,Comune,Settore Alpino,Web,Anno,Quota,Letti,Cuccette,Tavolato,Invernale,Tipologia,Regione
+1,SERRISTORI ALFREDO,SERRISTORI ALFREDO,STELVIO,ALPI RETICHE,http://www.duesselkdorferhuette.com,1892,2721,71,0,0,0,Rifugio,Provincia auton. Bolzano
+2,PLAN DE CORONES,PLAN DE CORONES,BRUNICO,ALPI DOLOMITICHE,http://www.sentieroselvaggio.it,1894,2231,20,0,0,0,Rifugio,Provincia auton. Bolzano
+3,DAL BIANCO MARCO,DAL BIANCO MARCO,ROCCA PIETORE,ALPI DOLOMITICHE,http://www.clubalpinoaccademico.it,1968,2727,9,0,0,0,Bivacco,Provincia auton. Trento
+4,BUSA DELLE DODESE/LENZI,BUSA DELLE DODESE/LENZI,BORGO VALSUGANA,ALPI DOLOMITICHE,http://www.sentieroselvaggio.it,1976,2100,6,0,0,0,Bivacco,Provincia auton. Trento
+5,FRONZA ALEARDO,FRONZA ALEARDO,NOVA LEVANTE,ALPI DOLOMITICHE,http://www.rifugiofronza.com,1900,2337,56,0,0,0,Rifugio,Provincia auton. Bolzano
+6,VELO DELLA MADONNA,VELO DELLA MADONNA,SIROR,ALPI DOLOMITICHE,http://www.rifugiovelodellamadonna.it,1980,2358,68,0,0,10,Rifugio,Provincia auton. Trento
+7,PASSO SELLA,PASSO SELLA,SELVA DI VAL GARDENA,ALPI DOLOMITICHE,http://www.val-gardena.com,1904,2213,86,0,0,0,Rifugio,Provincia auton. Bolzano
+8,MALGA DOSSON,MALGA DOSSON,VIGO RENDENA,ALPI RETICHE,http://www.planetmountain.com,1982,2360,10,0,0,0,Bivacco,Provincia auton. Trento
+9,VAIOLET,VAIOLET,POZZA DI FASSA,ALPI DOLOMITICHE,http://www.rifugiovajolet.com,1897,2243,130,0,0,12,Rifugio,Provincia auton. Trento
+10,VIGOLANA ALLA MADONNINA,VIGOLANA ALLA MADONNINA,VIGOLO VATTARO,PREALPI VENETE,http://www.sat.tn.it/default.aspx?fn=loadarea&idarea=446,1966,2030,6,0,0,0,Bivacco,Provincia auton. Trento
+11,CREMONA,CREMONA (ALLA STUA),BRENNERO,ALPI RETICHE,http://www.caivipiteno.it,1887,2423,55,0,0,0,Rifugio,Provincia auton. Bolzano
+12,PUEZ,PUEZ,SELVA DI VAL GARDENA,ALPI DOLOMITICHE,http://www.caibolzano.it,1889,2475,94,0,0,20,Rifugio,Provincia auton. Bolzano
+13,ROMA,ROMA,CAMPO TURES,ALPI NORICHE,http://www.rifugioroma.com,1895,2273,70,0,0,0,Rifugio,Provincia auton. Bolzano
+14,CUNELLA/COVA,CUNELLA/COVA,VILLA RENDENA,ALPI RETICHE,http://www.sat.tn.it/rifugi/cunella.htm,1982,2280,4,0,0,0,Bivacco,Provincia auton. Trento
+15,VIOZ/MANTOVA,VIOZ/MANTOVA,PEIO,ALPI RETICHE,http://www.sat.tn.it/default.aspx?fn=loadarea&idarea=414,1911,3535,60,0,0,6,Rifugio,Provincia auton. Trento
+16,PICCO IVIGNA,PICCO IVIGNA,SCENA,ALPI RETICHE,http://www.caimerano.it,1905,1815,16,0,0,0,Rifugio,Provincia auton. Bolzano
+17,ANTERMOIA,ANTERMOIA,MAZZIN DI FASSA,ALPI DOLOMITICHE,http://www.sat.tn.it,1911,2497,44,0,0,0,Rifugio,Provincia auton. Trento
+18,CARE ALTO/ONGARI,CARE ALTO/ONGARI,PELUGO,ALPI RETICHE,http://www.carealto.it,1912,2459,85,0,0,6,Rifugio,Provincia auton. Trento
+19,BEGEY ERNESTO,BEGEY ERNESTO,STREMBO,ALPI RETICHE,http://www.sat.tn.it,1970,2943,0,0,0,0,Bivacco,Provincia auton. Trento
+20,XII APOSTOLI/GARBARI F.LLI,XII APOSTOLI/GARBARI F.LLI,STENICO,ALPI RETICHE,http://www.dodiciapostoli.it,1907,2489,38,0,0,6,Rifugio,Provincia auton. Trento
+21,SPRUGGIO/TONINI,SPRUGGIO/TONINI,BASELGA DI PINE,PREALPI VENETE,http://www.rifugiotonini.it,1972,1906,60,0,0,0,Rifugio,Provincia auton. Trento
+22,PEDROTTI GIOVANNI,PEDROTTI GIOVANNI (ALLA ROSETTA),SIROR,ALPI DOLOMITICHE,http://www.rifugiorosetta.it,1890,2581,80,0,0,10,Rifugio,Provincia auton. Trento
+23,VICENZA,VICENZA,S.CRISTINA  VAL,ALPI DOLOMITICHE,http://www.rifugiovicenza.com,1895,2256,69,0,0,0,Rifugio,Provincia auton. Bolzano
+24,PONTE DI GHIACCIO,PONTE DI GHIACCIO (MIGLIORANZA),SELVA DEI MOLINI,ALPI NORICHE,http://www.rifugiopontedighiaccio.it,1908,2545,50,0,0,7,Rifugio,Provincia auton. Bolzano
+25,OLTREADIGE AL ROEN,OLTREADIGE AL ROEN,TERMENO,ALPI RETICHE,http://www.caibolzano.it,1913,1773,30,0,0,0,Rifugio,Provincia auton. Bolzano
+26,LOCATELLI ANTONIO,LOCATELLI ANTONIO,SESTO PUSTERIA,ALPI DOLOMITICHE,http://www.caipadova.it,1923,2405,150,0,0,0,Rifugio,Provincia auton. Bolzano
+27,MARIA E ALBERTO AI BRENTEI,MARIA E ALBERTO AI BRENTEI,RAGOLI,ALPI RETICHE,http://www.rifugiobrentei.it,,2182,95,0,0,14,Rifugio,Provincia auton. Trento
+28,MARCHETTI PROSPERO,MARCHETTI PROSPERO (ALLO STIVO),ARCO,PREALPI LOMBARDE,http://www.rifugiostivo.it,1906,2012,20,0,0,6,Rifugio,Provincia auton. Trento
+29,JUFFMANN GIORGIO,JUFFMANN GIORGIO,CLES,ALPI RETICHE,http://www.satcles.it/default/RifugioPeller.htm,2003,2022,7,0,0,0,Bivacco,Provincia auton. Trento
+30,VITTORIO VENETO,VITTORIO VENETO (AL SASSO NERO),VALLE AURINA,ALPI NORICHE,http://www.schutzhuetten.net/vittorioveneto,1894,2923,60,0,0,0,Rifugio,Provincia auton. Bolzano
+31,CAVAZZA FRANCO,CAVAZZA FRANCO,CORVARA IN BADIA,ALPI DOLOMITICHE,http://www.caibo.it,1924,2587,106,0,0,5,Rifugio,Provincia auton. Bolzano
+32,ZSIGMONDY /COMICI,ZSIGMONDY /COMICI,SESTO PUSTERIA,ALPI DOLOMITICHE,http://www.caipadova.it,1928,2224,98,0,0,6,Rifugio,Provincia auton. Bolzano
+33,PELLICIOLI LEONE,PELLICIOLI LEONE,STELVIO,ALPI RETICHE,http://www.sentieroselvaggio.it,1963,3230,9,0,0,0,Bivacco,Provincia auton. Bolzano
+34,CIAMPEDIE,CIAMPEDIE,VIGO DI FASSA,ALPI DOLOMITICHE,http://www.rifugiociampedie.com,1912,1998,27,0,0,0,Rifugio,Provincia auton. Trento
+35,CIMA LIBERA,CIMA LIBERA,RACINES,ALPI RETICHE,http://www.muellerhuette.eu,1908,3145,80,0,0,6,Rifugio,Provincia auton. Bolzano
+36,VEDRETTA PENDENTE,VEDRETTA PENDENTE,RACINES,ALPI RETICHE,http://www.caivipiteno.it,1889,2586,10,0,0,0,Rifugio,Provincia auton. Bolzano
+37,PRESANELLA/ROBERTI,PRESANELLA/ROBERTI,PINZOLO,ALPI RETICHE,http://www.sat.tn.it,1885,2205,12,0,0,0,Bivacco,Provincia auton. Trento
+38,BIASI GINO,BIASI GINO (AL BICCHIERE),RACINES,ALPI RETICHE,http://www.becherhaus.it,1894,3195,96,0,0,0,Rifugio,Provincia auton. Bolzano
+39,MANDRON/CITTA DI TRENTO,MANDRON/CITTA DI TRENTO,SPIAZZO,ALPI RETICHE,http://www.sat.tn.it,1954,2442,100,0,0,6,Rifugio,Provincia auton. Trento
+40,MONZONI/TARAMELLI,MONZONI/TARAMELLI,POZZA DI FASSA,ALPI DOLOMITICHE,http://www.rifugiotaramelli.it,1904,2040,16,0,0,0,Rifugio,Provincia auton. Trento
+41,VAL D AMOLA/SEGANTINI,VAL D AMOLA/SEGANTINI (VECCHIO),GIUSTINO,ALPI RETICHE,,1900,2373,0,0,0,0,Rifugio,Provincia auton. Trento
+42,BOLZANO,BOLZANO,FIEALLO SCILIAR,ALPI DOLOMITICHE,http://www.schlernhaus.it,1885,2457,120,0,0,0,Bivacco,Provincia auton. Bolzano
+43,LAENG GUALTIERO,LAENG GUALTIERO,SPIAZZO,ALPI RETICHE,http://www.cai.bs.it,1972,3191,6,0,0,0,Rifugio,Provincia auton. Trento
+44,EUROPA,EUROPA (VENNA ALLA GERLA),VAL DI VIZZE,ALPI NORICHE,http://www.caivipiteno.it,1890,2690,100,0,0,10,Rifugio,Provincia auton. Bolzano
+45,BAITA FOS-CE,BAITA FOS-CE,BRENTONICO,PREALPI LOMBARDE,http://www.satbrentonico.it,1981,1430,0,0,0,0,Rifugio,Provincia auton. Trento
+46,PARETE ROSSA,PARETE ROSSA,AVELENGO,ALPI RETICHE,http://www.caimerano.it,1900,1817,0,0,0,0,Rifugio,Provincia auton. Bolzano
+47,GIULIANI,GIULIANI (AL SASSOLUNGO),VAL DI FASSA,ALPI DOLOMITICHE,http://www.caibolzano.it,1935,3100,5,0,0,0,Bivacco,Provincia auton. Bolzano
+48,TRIDENTINA,TRIDENTINA,PREDOI,ALPI NORICHE,http://www.schutzhuetten.net,1900,2441,52,0,0,4,Rifugio,Provincia auton. Bolzano
+49,MONTE CALINO/SAN PIETRO,MONTE CALINO/SAN PIETRO,RIVA DEL GARDA,PREALPI LOMBARDE,http://www.sat.tn.it,1930,976,18,0,0,0,Rifugio,Provincia auton. Trento
+50,SINEL/PEDRINOLLA,SINEL/PEDRINOLLA,ALA,PREALPI VENETE,http://www.sat.tn.it/rifugi/pedrinolla.htm,1978,1990,4,0,0,0,Bivacco,Provincia auton. Trento
+51,GIOGO LUNGO,GIOGO LUNGO,PREDOI,ALPI NORICHE,http://www.lenkl.com,1887,2603,45,0,0,0,Rifugio,Provincia auton. Bolzano
+52,CANALI JACK,CANALI JACK,OSSANA,ALPI RETICHE,http://www.sentieroselvaggio.it,1976,2480,9,0,0,0,Bivacco,Provincia auton. Trento
+53,RODA DI VAEL,RODA DI VAEL,VIGO DI FASSA,ALPI DOLOMITICHE,http://www.rodadivael.it,1910,2280,50,0,0,4,Rifugio,Provincia auton. Trento
+54,PASSO DELLE VACCHE/SEGALLA,PASSO DELLE VACCHE/SEGALLA,DAONE,ALPI RETICHE,http://www.sat.tn.it/default.aspx?fn=loadarea&idarea=441,1978,3050,6,0,0,0,Bivacco,Provincia auton. Trento
+55,VAL D AMOLA/SEGANTINI,VAL D AMOLA/SEGANTINI (NUOVO),GIUSTINO,ALPI RETICHE,http://www.rifugiosegantini.com,1977,2373,50,0,0,8,Rifugio,Provincia auton. Trento
+56,TUCKETT/SELLA,TUCKETT/SELLA ( 2 RIFUGI CONTIGUI ),RAGOLI,ALPI RETICHE,http://www.dolomitibrenta.it/Rifugio%20Tuckett.htm,1904,2272,132,0,0,22,Rifugio,Provincia auton. Trento
+57,BORLETTI ALDO E VANNI,BORLETTI ALDO E VANNI,STELVIO,ALPI RETICHE,http://www.caimerano.it/rifugi.html,1897,2188,20,0,0,0,Rifugio,Provincia auton. Bolzano
+58,LANCIA VINCENZO,LANCIA VINCENZO (ALPE POZZA),VALLARSA,PREALPI VENETE,http://www.rifugiolancia.it,1939,1825,64,0,0,4,Rifugio,Provincia auton. Trento
+59,BRENTARI/CIMA D ASTA,BRENTARI/CIMA D ASTA,PIEVE TESINO,ALPI DOLOMITICHE,http://www.sat.tn.it,1908,2473,56,0,0,6,Rifugio,Provincia auton. Trento
+60,LARCHER AL CEVEDALE,LARCHER AL CEVEDALE,PEIO,ALPI RETICHE,http://www.sat.tn.it,1882,2608,80,0,0,14,Rifugio,Provincia auton. Trento
+61,TREVISO,TREVISO,TONADICO,ALPI DOLOMITICHE,http://www.caitreviso.it,1898,1631,42,0,0,0,Rifugio,Provincia auton. Trento
+62,MINAZIO CARLO,MINAZIO CARLO,TONADICO,ALPI DOLOMITICHE,http://www.caipadova.it,1964,2230,12,0,0,0,Bivacco,Provincia auton. Trento
+63,SETTE SELLE,SETTE SELLE,PALU' DEL FERSINA,PREALPI VENETE,http://www.satpergine.it/index.php?page=rifugio,1975,2014,30,0,0,0,Rifugio,Provincia auton. Trento
+64,CANZIANI UMBERTO,CANZIANI UMBERTO (AL LAGO VERDE),ULTIMO,ALPI RETICHE,http://:www.rifugi-bivacchi.com,1909,2561,70,0,0,0,Rifugio,Provincia auton. Bolzano
+65,FIRENZE,FIRENZE,S.CRISTINA DI VA,ALPI DOLOMITICHE,http://www.rifugiofirenze.com,1888,2040,113,0,0,0,Rifugio,Provincia auton. Bolzano
+66,PELLER,PELLER,CLES,ALPI RETICHE,http://www.satcles.it,1903,2022,40,0,0,0,Rifugio,Provincia auton. Trento
+67,CALCIATI AL TRIBULAUN,CALCIATI AL TRIBULAUN,BRENNERO,ALPI RETICHE,http://www.tribulaunhuette.com,1891,2369,37,0,0,0,Rifugio,Provincia auton. Bolzano
+68,CIMA PRESANELLA/BRIGATA OROBICA,CIMA PRESANELLA/BRIGATA OROBICA,PINZOLO,ALPI RETICHE,http://www.sat.tn.it,1968,3382,8,0,0,0,Bivacco,Provincia auton. Trento
+69,CROZZON/CASTIGLIONI,CROZZON/CASTIGLIONI,PINZOLO,ALPI RETICHE,http://www.sat.tn.it/rifugi/castiglioni.htm,1957,3135,4,0,0,0,Bivacco,Provincia auton. Trento
+70,MORO ALDO,MORO ALDO,PREDAZZO,ALPI DOLOMITICHE,http://www.sentieroselvaggio.it,1981,2565,9,0,0,0,Bivacco,Provincia auton. Trento
+71,FLLI FILZI,FLLI FILZI (FINONCHIO),ROVERETO,PREALPI VENETE,,1930,1603,16,0,0,0,Rifugio,Provincia auton. Trento
+72,STAVEL/DENZA,STAVEL/DENZA,VERMIGLIO,ALPI RETICHE,http://www.rifugiodenza.com,1899,2298,56,0,0,20,Rifugio,Provincia auton. Trento
+73,FIAMME GIALLE,FIAMME GIALLE,TONADICO,ALPI DOLOMITICHE,http://www.valcanali.it,1967,3005,9,0,0,0,Bivacco,Provincia auton. Trento
+74,CITTA DI CANTU,CITTA DI CANTU,STELVIO,ALPI RETICHE,http://www.rifugi-bivacchi.com,1971,3525,9,0,0,0,Bivacco,Provincia auton. Bolzano
+75,ZENI,ZENI (ALLA VALLACCIA),POZZA DI FASSA,ALPI DOLOMITICHE,http://www.clubalpinoaccademico.it,1970,2100,5,0,0,0,Bivacco,Provincia auton. Trento
+76,CIMA FIAMMANTE,CIMA FIAMMANTE,PARCINES,ALPI RETICHE,http://www.caimerano.it/rifugi.html,1891,2259,59,0,0,4,Rifugio,Provincia auton. Bolzano
+77,PAYER JULIUS,PAYER JULIUS,STELVIO,ALPI RETICHE,http://www.payerhuette.com,1875,3029,86,0,0,0,Rifugio,Provincia auton. Bolzano
+78,PORRO GIOVANNI,PORRO GIOVANNI,SELVA DEI MOLINI,ALPI NORICHE,http://www.chemnitzerhuette.com,1880,2420,60,0,0,0,Rifugio,Provincia auton. Bolzano
+79,PETRARCA ALL ALTISSIMA,PETRARCA ALL ALTISSIMA,MOSO IN PASSIRIA,ALPI RETICHE,http://www.caimerano.it,1897,2875,112,0,0,8,Rifugio,Provincia auton. Bolzano
+80,MARINELLI DINO,MARINELLI DINO,MALE,ALPI RETICHE,http://www.rifugi-bivacchi.com,1993,2075,3,0,0,0,Bivacco,Provincia auton. Trento
+81,CITTA DI MILANO,CITTA DI MILANO,PRATO ALLO STELV,ALPI RETICHE,http://www.schaubachhuette.it,1876,2581,41,0,0,0,Rifugio,Provincia auton. Bolzano
+82,CORNO DEL RENON DI SOPRA,CORNO DEL RENON DI SOPRA,BARBIANO,ALPI RETICHE,http://www.caibolzano.it,1894,2259,48,0,0,0,Rifugio,Provincia auton. Bolzano
+83,TOSA/PEDROTTI,TOSA/PEDROTTI (2 RIFUGI CONTIGUI),S. LORENZO IN BANALE,ALPI RETICHE,http://www.rifugiotosapedrotti.it,1914,2491,155,0,0,21,Rifugio,Provincia auton. Trento
+84,FRACCAROLI MARIO,FRACCAROLI MARIO,ALA,PREALPI VENETE,http://www.sentieroselvaggio.it,1953,2230,22,0,0,6,Rifugio,Provincia auton. Trento
+85,PRA CASTRON/COSTANZI,PRA CASTRON/COSTANZI,DIMARO,ALPI RETICHE,http://www.sat.tn.it/default.aspx?fn=loadarea&idarea=442,1985,2365,12,0,0,0,Bivacco,Provincia auton. Trento
+86,VAL D AMBIEZ/AGOSTINI,VAL D AMBIEZ/AGOSTINI,S. LORENZO IN BANALE,ALPI RETICHE,http://www.rifugioagostini.com,1937,2405,57,0,0,8,Rifugio,Provincia auton. Trento
+87,CIMA SASSARA/F.LLI BONVECCHIO,CIMA SASSARA/F.LLI BONVECCHIO,DIMARO,ALPI RETICHE,http://www.sat.tn.it/rifugi/bonvecchio.htm,1972,2780,6,0,0,0,Bivacco,Provincia auton. Trento
+88,PLAN,PLAN,MOSO DI PASSIRIA,ALPI RETICHE,http://www.caimerano.it,1899,2989,60,0,0,4,Rifugio,Provincia auton. Bolzano
+89,FORCELLA GRANDE/RIGATTI,FORCELLA GRANDE/RIGATTI,MOENA,ALPI DOLOMITICHE,http://www.sat.tn.it,1972,2650,9,0,0,0,Bivacco,Provincia auton. Trento
+90,CORSI NINO,CORSI NINO,MARTELLO,ALPI RETICHE,http://www.zufallhuette.com,1882,2265,80,0,0,0,Rifugio,Provincia auton. Bolzano
+91,BERGAMO,BERGAMO,TIRES,ALPI DOLOMITICHE,http://www.caibergamo.it,1887,2129,85,0,0,0,Rifugio,Provincia auton. Bolzano
+92,ALTISSIMO/CHIESA DAMIANO,ALTISSIMO/CHIESA DAMIANO,BRENTONICO,PREALPI LOMBARDE,http://www.rifugioaltissimo.it,1891,2060,35,0,0,8,Rifugio,Provincia auton. Trento
+93,FORCELLA VALLAGA,FORCELLA VALLAGA,VARNA,ALPI RETICHE,http://www.rifugio-forcella-vallaga.it,1911,2480,45,0,0,8,Rifugio,Provincia auton. Bolzano
+94,BINDESI/PRATI,BINDESI/PRATI,TRENTO,PREALPI VENETE,http://www.sat.tn.it,1962,670,4,0,0,0,Rifugio,Provincia auton. Trento
+95,BOE,BOE,CANAZEI,ALPI DOLOMITICHE,http://www.rifugioboe.it,1898,2873,69,0,0,4,Rifugio,Provincia auton. Trento
+96,PRADIDALI,PRADIDALI,TONADICO,ALPI DOLOMITICHE,http://www.rifugiopradidali.com,1896,2278,60,0,0,0,Rifugio,Provincia auton. Trento
+97,VEDRETTA PIANA,VEDRETTA PIANA,RACINES,ALPI RETICHE,,1888,2254,10,0,0,0,Rifugio,Provincia auton. Bolzano
+98,CASAROTA/CIOLA,CASAROTA/CIOLA,CENTA S.NICOLO,PREALPI VENETE,http://www.sat.tn.it,1959,1572,38,0,0,12,Rifugio,Provincia auton. Trento
+99,GUIDE DI SAN MARTINO,GUIDE DI SAN MARTINO (AGAI),TONADICO,ALPI DOLOMITICHE,http://www.rifugi-bivacchi.com,1968,2996,6,0,0,0,Bivacco,Provincia auton. Trento
+100,KOSTNER FRANZ,KOSTNER FRANZ,CORVARA IN BADIA,ALPI DOLOMITICHE,http://www.rifugiokostner.it,1914,2536,33,0,0,0,Rifugio,Provincia auton. Bolzano
+101,CHIUSA AL CAMPACCIO,CHIUSA AL CAMPACCIO,CHIUSA,ALPI RETICHE,http://www.caibolzano.it,1908,1923,38,0,0,0,Rifugio,Provincia auton. Bolzano
+102,PIO XI,PIO XI,CURON VENOSTA,ALPI RETICHE,http://www.caidesio.net/joomla254/la-sezione/rifugi,1893,2557,50,0,0,0,Rifugio,Provincia auton. Bolzano
+103,VAL DI FUMO,VAL DI FUMO,DAONE,ALPI RETICHE,http://www.trentinorifugi.com/index.php?bsclef=schede_rifugi&ex=html&viewnews=ok&ln=it&id=92&catid=7,1960,1918,50,0,0,6,Rifugio,Provincia auton. Trento
+104,GRAFFER GIORGIO,GRAFFER GIORGIO,RAGOLI,ALPI RETICHE,http://www.graffer.com,1947,2261,70,0,0,0,Rifugio,Provincia auton. Trento
+105,POZZE,POZZE,BRESIMO,ALPI RETICHE,http://www.girovagandointrentino.it,1983,1989,10,0,0,0,Bivacco,Provincia auton. Trento
+106,CITTA DI BRESSANONE,CITTA DI BRESSANONE (ALLA PLOSE),BRESSANONE,ALPI DOLOMITICHE,http://www.plosehuette.com,1887,2446,60,0,0,0,Rifugio,Provincia auton. Bolzano
+107,PERNICI NINO,PERNICI NINO (BOCCA DI TRAT),RIVA DEL GARDA,PREALPI LOMBARDE,http://www.pernici.com,1929,1600,34,0,0,6,Rifugio,Provincia auton. Trento
+108,PALUDEI,PALUDEI,CENTA S. NICOLO,PREALPI VENETE,http://www.sat.tn.it/default.aspx?fn=loadarea&idarea=429,1949,1059,16,0,0,0,Rifugio,Provincia auton. Trento
+109,SAENT/DORIGONI,SAENT/DORIGONI,RABBI,ALPI RETICHE,http://www.rifugiodorigoni.it,1903,2436,80,0,0,4,Rifugio,Provincia auton. Trento
+110,MENEGHELLO FRANCESCO,MENEGHELLO FRANCESCO,PEIO,ALPI RETICHE,http://www.rifugi-bivacchi.com,1952,3340,6,0,0,0,Bivacco,Provincia auton. Trento

@@ -6,7 +6,6 @@ import javax.jws.WebService;
 
 import introsde.APP1.parks.persistence.dao.ParkPersistencyService;
 import introsde.APP1.parks.persistence.entities.Park;
-import javassist.NotFoundException;
 
 //Service Implementation
 @WebService(endpointInterface = "introsde.APP1.parks.soap.ParkWebService")
@@ -30,16 +29,20 @@ public class ParkImpl implements ParkWebService{
 	}
 
 	@Override
-	public Park updatePark(Park park) throws NotFoundException {
+	public Park updatePark(Park park) {
 		if(ParkPersistencyService.getParkById(park.getId()) != null) {
 			return ParkPersistencyService.updatePark(park);
 		}
-		throw new NotFoundException("Park with id "+park.getId()+" not found");
+		throw new IllegalArgumentException("Park with id "+park.getId()+" not found");
 	}
 
 	@Override
 	public Park getParkById(Integer id) {
-		return ParkPersistencyService.getParkById(id);
+		Park park = ParkPersistencyService.getParkById(id);
+		if( park==null ) {
+			throw new IllegalArgumentException("Park with id "+id+" not found");
+		}
+		return park;
 	}
 	
 }
