@@ -10,7 +10,11 @@ public class test {
 		Park p = new Park();
 		p.setNome("ESEMPIO");
 		p.setParco("PARKO1");
-		System.out.println(ParkPersistencyService.savePark(p));
+		p = ParkPersistencyService.savePark(p);
+		System.out.println(p.getNome() + p.getParco() + p.getId());
+		ParkPersistencyService.removePark(p);
+		
+//      \copy parks (id,parco,nome,superficie,provvedimento,comuni,elencoufficiale,altreinformazioni,indirizzo,gestore,provincie,email) FROM '/home/dallatorre/IntroSDEProjects/FinalProject_Server1/src/DBparks-Aligned.csv' DELIMITER ',' CSV HEADER
 	}
 
 }
