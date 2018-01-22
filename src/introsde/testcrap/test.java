@@ -15,6 +15,7 @@ public class test {
 		ParkPersistencyService.removePark(p);
 		
 //      \copy parks (id,parco,nome,superficie,provvedimento,comuni,elencoufficiale,altreinformazioni,indirizzo,gestore,provincie,email) FROM '/home/dallatorre/IntroSDEProjects/FinalProject_Server1/src/DBparks-Aligned.csv' DELIMITER ',' CSV HEADER
+//		\copy sheds (id,nome,localita,comune,settore_alpino,web,anno,quota,letti,cuccette,tavolato,invernale,tipologia,regione) FROM '/home/dallatorre/IntroSDEProjects/FinalProject_Server1/src/Rifugi-Bivacchi-Aligned.csv' DELIMITER ',' CSV HEADER
 	}
 
 }
