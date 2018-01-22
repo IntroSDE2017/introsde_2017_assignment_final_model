@@ -10,9 +10,9 @@ public class ParkPersistencyService {
 	public static Park savePark(Park entity) {
 		bookDao = new ParksDAO();
 		bookDao.openCurrentSessionwithTransaction();
-		bookDao.persist(entity);
+		Park p = bookDao.persist(entity);
 		bookDao.closeCurrentSessionwithTransaction();
-		return entity;
+		return p;
 	}
 
 	public static Park updatePark(Park entity) {

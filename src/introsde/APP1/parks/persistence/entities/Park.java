@@ -10,12 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import org.apache.camel.dataformat.bindy.annotation.CsvRecord;
-import org.apache.camel.dataformat.bindy.annotation.DataField;
-
 @Entity
 @Table(name = "Parks")
-@CsvRecord(separator = ",", skipFirstLine = true)
 @SequenceGenerator(name="seq", initialValue=500, allocationSize=1000)
 public class Park implements Serializable{
 	/**
@@ -25,36 +21,24 @@ public class Park implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="seq")
-	@DataField(pos = 1)
     private Integer id;								// ID is automatically generated
     
-	@DataField(pos = 2)
     private String parco;
-	@DataField(pos = 3)
     private String nome;
-	@DataField(pos = 4)
     private Float superficie; 
     
-	@DataField(pos = 6)
 	@Column(columnDefinition="text")
     private String comuni;
-	@DataField(pos = 11)
 	@Column(columnDefinition="text")
     private String provincie;
-    @DataField(pos = 5)
 	@Column(columnDefinition="text")
     private String provvedimento;
-    @DataField(pos = 7)
 	@Column(columnDefinition="text")
     private String elencoUfficiale;
-    @DataField(pos = 8)
 	@Column(columnDefinition="text")
     private String altreInformazioni;
-    @DataField(pos = 9)
     private String indirizzo;
-    @DataField(pos = 10)
     private String gestore;
-    @DataField(pos = 12)
     private String email;
     
 	//Getters and Setters

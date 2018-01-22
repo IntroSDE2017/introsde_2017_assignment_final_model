@@ -10,6 +10,8 @@ import introsde.APP1.parks.persistence.entities.Park;
 
 public class ParksDAO {
 
+	private static final String HIBERNATE_CFG_XML = "hibernate.cfg.xml";
+
 	private Session currentSession;
 	
 	private Transaction currentTransaction;
@@ -39,7 +41,7 @@ public class ParksDAO {
 	}
 	
 	private static SessionFactory getSessionFactory() {
-		Configuration configuration = new Configuration().configure("hibernate.cfg.xml");
+		Configuration configuration = new Configuration().configure(HIBERNATE_CFG_XML);
 		configuration.addAnnotatedClass(Park.class);
 		StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
 				.applySettings(configuration.getProperties());
@@ -63,8 +65,9 @@ public class ParksDAO {
 		this.currentTransaction = currentTransaction;
 	}
 	
-	public void persist(Park entity) {
+	public Park persist(Park entity) {
 		getCurrentSession().save(entity);
+		return entity;
 	}
 
 	public void update(Park entity) {
