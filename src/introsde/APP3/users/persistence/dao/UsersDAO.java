@@ -7,6 +7,7 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
 import introsde.APP3.users.persistence.entities.PlaceVisited;
+import introsde.APP3.users.persistence.entities.Preference;
 import introsde.APP3.users.persistence.entities.Review;
 import introsde.APP3.users.persistence.entities.User;
 
@@ -47,6 +48,7 @@ public class UsersDAO {
 		configuration.addAnnotatedClass(User.class);
 		configuration.addAnnotatedClass(Review.class);
 		configuration.addAnnotatedClass(PlaceVisited.class);
+		configuration.addAnnotatedClass(Preference.class);
 		StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
 				.applySettings(configuration.getProperties());
 		SessionFactory sessionFactory = configuration.buildSessionFactory(builder.build());

@@ -8,6 +8,7 @@ import introsde.APP3.users.persistence.dao.UserPersistencyService;
 import introsde.APP3.users.persistence.dao.ReviewPersistencyService;
 import introsde.APP3.users.persistence.dao.PlaceVisitedPersistencyService;
 import introsde.APP3.users.persistence.entities.PlaceVisited;
+import introsde.APP3.users.persistence.entities.Preference;
 import introsde.APP3.users.persistence.entities.Review;
 import introsde.APP3.users.persistence.entities.User;
 
@@ -134,6 +135,26 @@ public class UserImpl implements UserWebService{
 	@Override
 	public List<PlaceVisited> getPlacesVisitedOfShed(Integer shedID) {
 		return PlaceVisitedPersistencyService.getAllPlacesVisitedForShed(shedID);
+	}
+
+	@Override
+	public boolean userPreferParks(String id) {
+		User user = getUserById(id);
+		return user.getPreference().getPreferenceParks();
+	}
+
+	@Override
+	public boolean userPreferSheds(String id) {
+		User user = getUserById(id);
+		return user.getPreference().getPreferenceSheds();
+	}
+
+	@Override
+	public void setUserPreference(String id, boolean parks, boolean sheds) {
+		User user = getUserById(id);
+		user.setPreference(new Preference());
+		user.getPreference().setPreferenceParks(parks);
+		user.getPreference().setPreferenceSheds(sheds);
 	}
 	
 }

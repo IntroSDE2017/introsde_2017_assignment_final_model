@@ -22,6 +22,9 @@ public interface UserWebService{
 	@WebMethod User addUser(User user);
 	@WebMethod User updateUser(User user);
 	@WebMethod User getUserById(String id);
+	@WebMethod boolean userPreferParks(String id);
+	@WebMethod boolean userPreferSheds(String id);
+	@WebMethod void setUserPreference(String id, boolean parks, boolean sheds);
 	
 	@WebMethod List<Review> getReviewList();
 	@WebMethod List<Review> getReviewsOfUser(String userID);

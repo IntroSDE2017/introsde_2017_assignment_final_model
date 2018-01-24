@@ -10,7 +10,7 @@ import introsde.APP1.parks.persistence.entities.Park;
 
 public class ParksDAO {
 
-	private static final String HIBERNATE_CFG_XML = "hibernate.cfg.xml";
+	private static final String HIBERNATE_CFG_XML = "hibernateAPP1.cfg.xml";
 
 	private Session currentSession;
 	

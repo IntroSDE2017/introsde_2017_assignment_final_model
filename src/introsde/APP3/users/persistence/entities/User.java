@@ -2,7 +2,6 @@ package introsde.APP3.users.persistence.entities;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -30,6 +29,7 @@ public class User implements Serializable{
 	private Set<Review> reviews;
     @OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
     private Set<PlaceVisited> places;
+    private Preference preference;
     
     public String getId() {
 		return id;
@@ -66,6 +66,12 @@ public class User implements Serializable{
 	}
 	public void setPlaces(Set<PlaceVisited> places) {
 		this.places = places;
+	}
+	public Preference getPreference() {
+		return preference;
+	}
+	public void setPreference(Preference preference) {
+		this.preference = preference;
 	}
     
 		
