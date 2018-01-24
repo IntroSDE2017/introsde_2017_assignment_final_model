@@ -35,6 +35,12 @@ public class UserImpl implements UserWebService{
 	}
 
 	@Override
+	public void deleteUserById(Integer id) {
+		User item = UserPersistencyService.getUserById(id);
+		UserPersistencyService.removeUser(item);
+	}
+
+	@Override
 	public User updateUser(User item) {
 		if(UserPersistencyService.getUserById(item.getId()) != null) {
 			return UserPersistencyService.updateUser(item);
@@ -43,7 +49,7 @@ public class UserImpl implements UserWebService{
 	}
 
 	@Override
-	public User getUserById(String id) {
+	public User getUserById(Integer id) {
 		User item = UserPersistencyService.getUserById(id);
 		if( item==null ) {
 			throw new IllegalArgumentException("User with id "+id+" not found");
@@ -58,7 +64,7 @@ public class UserImpl implements UserWebService{
 	}
 
 	@Override
-	public List<Review> getReviewsOfUser(String userID) {
+	public List<Review> getReviewsOfUser(Integer userID) {
 		User user = getUserById(userID);
 		return new ArrayList<Review>(user.getReviews());
 	}
@@ -74,7 +80,7 @@ public class UserImpl implements UserWebService{
 	}
 
 	@Override
-	public void addReview(Review review, String userID) {
+	public void addReview(Review review, Integer userID) {
 		User user = getUserById(userID);
 		user.getReviews().add(review);
 		UserPersistencyService.updateUser(user);
@@ -101,13 +107,13 @@ public class UserImpl implements UserWebService{
 	}
 
 	@Override
-	public List<PlaceVisited> getPlacesVisitedOfUser(String userID) {
+	public List<PlaceVisited> getPlacesVisitedOfUser(Integer userID) {
 		User user = getUserById(userID);
 		return new ArrayList<PlaceVisited>(user.getPlaces());
 	}
 
 	@Override
-	public void addPlaceVisited(PlaceVisited place, String userID) {
+	public void addPlaceVisited(PlaceVisited place, Integer userID) {
 		User user = getUserById(userID);
 		user.getPlaces().add(place);
 		UserPersistencyService.updateUser(user);
@@ -138,23 +144,25 @@ public class UserImpl implements UserWebService{
 	}
 
 	@Override
-	public boolean userPreferParks(String id) {
+	public boolean userPreferParks(Integer id) {
 		User user = getUserById(id);
 		return user.getPreference().getPreferenceParks();
 	}
 
 	@Override
-	public boolean userPreferSheds(String id) {
+	public boolean userPreferSheds(Integer id) {
 		User user = getUserById(id);
 		return user.getPreference().getPreferenceSheds();
 	}
 
 	@Override
-	public void setUserPreference(String id, boolean parks, boolean sheds) {
+	public void setUserPreference(Integer id, boolean parks, boolean sheds) {
 		User user = getUserById(id);
-		user.setPreference(new Preference());
-		user.getPreference().setPreferenceParks(parks);
-		user.getPreference().setPreferenceSheds(sheds);
+		Preference n = new Preference();
+		n.setPreferenceParks(parks);
+		n.setPreferenceSheds(sheds);
+		user.setPreference(n);
+		UserPersistencyService.updateUser(user);
 	}
 	
 }

@@ -7,6 +7,8 @@ import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -20,21 +22,22 @@ public class User implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	@Id
-    private String id;								// ID is automatically generated
+	@GeneratedValue(strategy=GenerationType.AUTO)
+    private Integer id;								// ID is automatically generated
     
     private String first_name;
     private String username;
     private Date registerDate;
-    @OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
+    @OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.MERGE)
 	private Set<Review> reviews;
-    @OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
+    @OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.MERGE)
     private Set<PlaceVisited> places;
     private Preference preference;
     
-    public String getId() {
+    public Integer getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getFirst_name() {

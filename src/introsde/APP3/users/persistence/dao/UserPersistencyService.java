@@ -29,7 +29,7 @@ public class UserPersistencyService {
 		bookDao.closeCurrentSessionwithTransaction();
 	}
 	
-	public static User getUserById(String id) {
+	public static User getUserById(Integer id) {
 		bookDao = new UsersDAO();
 		bookDao.openCurrentSession();
 		User book = (User) bookDao.getCurrentSession().get(User.class, id);

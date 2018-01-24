@@ -23,21 +23,21 @@ public class UserTest {
 		public void testAddUser() {		
 			User u = new User();
 			u.setFirst_name("USER");
-			u.setId("0000001");
+			u.setId(1);
 			UserPersistencyService.saveUser(u);
-			u = UserPersistencyService.getUserById("0000001");
+			u = UserPersistencyService.getUserById(1);
 			assertEquals("USER", u.getFirst_name());
 		}
 		
 		public void testAddPlace() {
-			User u = UserPersistencyService.getUserById("0000001");
+			User u = UserPersistencyService.getUserById(1);
 			
 			PlaceVisited p = new PlaceVisited();
 			p.setId_park(2000);
 			p.setVote(1);
 			u.getPlaces().add(p);
 			UserPersistencyService.updateUser(u);
-			u = UserPersistencyService.getUserById("0000001");
+			u = UserPersistencyService.getUserById(1);
 			assertEquals(1, u.getPlaces().size());
 			ArrayList<PlaceVisited> pp = new ArrayList<PlaceVisited>(u.getPlaces());
 			assertEquals((int) 2000, (int) pp.get(0).getId_park());
@@ -52,7 +52,7 @@ public class UserTest {
 		}
 		
 		public void remove() {
-			User u = UserPersistencyService.getUserById("0000001");
+			User u = UserPersistencyService.getUserById(1);
 			
 			UserPersistencyService.removeUser(u);
 		}
