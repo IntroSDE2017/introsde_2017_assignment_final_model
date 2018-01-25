@@ -44,6 +44,12 @@ public class ParkImpl implements ParkWebService{
 		}
 		return park;
 	}
+
+	@Override
+	public List<Park> getParkByName(String name) {
+		List<Park> parkList = ParkPersistencyService.getAllParksWithName(name);
+		return parkList;
+	}
 	
 }
 

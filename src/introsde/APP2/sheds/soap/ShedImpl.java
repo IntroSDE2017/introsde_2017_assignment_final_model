@@ -39,5 +39,11 @@ public class ShedImpl implements ShedWebService{
 		}
 		return Shed;
 	}
+
+	@Override
+	public List<Shed> getShedByName(String name) {
+		List<Shed> personList = ShedPersistencyService.getShedsByName(name);
+		return personList;
+	}
 	
 }

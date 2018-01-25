@@ -45,4 +45,12 @@ public class ShedPersistencyService {
 		bookDao.closeCurrentSession();
 		return books;
 	}
+
+	public static List<Shed> getShedsByName(String name) {
+		bookDao = new ShedsDAO();
+		bookDao.openCurrentSession();
+		List<Shed> books = (List<Shed>) bookDao.getCurrentSession().createQuery("from Shed p WHERE p.comune LIKE '%"+name+"%' OR p.localita LIKE '%"+name+"%' OR p.nome LIKE '%"+name+"%'").list();
+		bookDao.closeCurrentSession();
+		return books;
+	}
 }

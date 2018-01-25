@@ -18,5 +18,5 @@ public interface ShedWebService{
 	@WebMethod Shed addShed(Shed Shed);
 	@WebMethod Shed updateShed(Shed Shed);
 	@WebMethod Shed getShedById(Integer id);
-	
+	@WebMethod List<Shed> getShedByName(String name);
 }

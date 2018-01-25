@@ -20,5 +20,5 @@ public interface ParkWebService{
 	@WebMethod Park addPark(Park park);
 	@WebMethod Park updatePark(Park park);
 	@WebMethod Park getParkById(Integer id);
-	
+	@WebMethod List<Park> getParkByName(String name);
 }

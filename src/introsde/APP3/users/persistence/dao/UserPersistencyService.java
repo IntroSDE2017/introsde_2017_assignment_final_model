@@ -44,4 +44,12 @@ public class UserPersistencyService {
 		bookDao.closeCurrentSession();
 		return books;
 	}
+
+	public static List<User> getUserByName(String name) {
+		bookDao = new UsersDAO();
+		bookDao.openCurrentSession();
+		List<User> books = (List<User>) bookDao.getCurrentSession().createQuery("from User p WHERE p.first_name LIKE '%"+name+"%' OR p.username LIKE '%"+name+"%' ").list();
+		bookDao.closeCurrentSession();
+		return books;
+	}
 }

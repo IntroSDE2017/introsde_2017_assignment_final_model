@@ -45,4 +45,12 @@ public class ParkPersistencyService {
 		bookDao.closeCurrentSession();
 		return books;
 	}
+
+	public static List<Park> getAllParksWithName(String name) {
+		bookDao = new ParksDAO();
+		bookDao.openCurrentSession();
+		List<Park> books = (List<Park>) bookDao.getCurrentSession().createQuery("from Park p WHERE p.nome LIKE '%"+name+"%' OR p.comuni LIKE '%"+name+"%'").list();
+		bookDao.closeCurrentSession();
+		return books;
+	}
 }

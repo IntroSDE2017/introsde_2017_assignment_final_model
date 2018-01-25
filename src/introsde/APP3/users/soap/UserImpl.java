@@ -54,6 +54,12 @@ public class UserImpl implements UserWebService{
 	}
 
 	@Override
+	public List<User> getUserByName(String name) {
+		List<User> personList = UserPersistencyService.getUserByName(name);
+		return personList;
+	}
+
+	@Override
 	public List<Review> getReviewList() {
 		List<Review> personList = ReviewPersistencyService.getAllReviews();
 		return personList;

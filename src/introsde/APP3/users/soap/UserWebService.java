@@ -26,6 +26,7 @@ public interface UserWebService{
 	@WebMethod boolean userPreferSheds(Integer id);
 	@WebMethod void setUserPreference(Integer id, boolean parks, boolean sheds);
 	@WebMethod void deleteUserById(Integer id);
+	@WebMethod List<User> getUserByName(String name);
 	
 	@WebMethod List<Review> getReviewList();
 	@WebMethod List<Review> getReviewsOfUser(Integer userID);
