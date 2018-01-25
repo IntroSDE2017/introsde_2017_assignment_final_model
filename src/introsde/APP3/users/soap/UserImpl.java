@@ -9,6 +9,7 @@ import introsde.APP3.users.persistence.dao.ReviewPersistencyService;
 import introsde.APP3.users.persistence.dao.PlaceVisitedPersistencyService;
 import introsde.APP3.users.persistence.entities.PlaceVisited;
 import introsde.APP3.users.persistence.entities.Preference;
+import introsde.APP3.users.persistence.entities.RankedVisit;
 import introsde.APP3.users.persistence.entities.Review;
 import introsde.APP3.users.persistence.entities.User;
 
@@ -16,11 +17,6 @@ import introsde.APP3.users.persistence.entities.User;
 //Service Implementation
 @WebService(endpointInterface = "introsde.APP3.users.soap.UserWebService")
 public class UserImpl implements UserWebService{
-
-	@Override
-	public String getHelloWorldAsString(String name) {
-		return "Hello World JAX-WS " + name;
-	}
 
 	@Override
 	public List<User> getUserList() {
@@ -163,6 +159,11 @@ public class UserImpl implements UserWebService{
 		n.setPreferenceSheds(sheds);
 		user.setPreference(n);
 		UserPersistencyService.updateUser(user);
+	}
+
+	@Override
+	public List<RankedVisit> getMostRankedVisits() {
+		return PlaceVisitedPersistencyService.getMostRatedVisits();
 	}
 	
 }

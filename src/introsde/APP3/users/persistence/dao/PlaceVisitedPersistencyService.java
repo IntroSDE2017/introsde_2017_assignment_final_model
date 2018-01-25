@@ -1,8 +1,12 @@
 package introsde.APP3.users.persistence.dao;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+import org.hibernate.query.Query;
+
 import introsde.APP3.users.persistence.entities.PlaceVisited;
+import introsde.APP3.users.persistence.entities.RankedVisit;
 
 public class PlaceVisitedPersistencyService {
 	private static UsersDAO bookDao;
@@ -60,5 +64,23 @@ public class PlaceVisitedPersistencyService {
 		List<PlaceVisited> books = (List<PlaceVisited>) bookDao.getCurrentSession().createQuery("from PlaceVisited where id_shed='"+id+"'").list();
 		bookDao.closeCurrentSession();
 		return books;
+	}
+	
+	public static List<RankedVisit> getMostRatedVisits() {
+		bookDao = new UsersDAO();
+		bookDao.openCurrentSession();
+		
+		List<Object[]> books = (List<Object[]>) bookDao.getCurrentSession().createQuery("SELECT SUM(v.vote) as sum, v.id_park as id_park, v.id_shed as id_shed FROM PlaceVisited v GROUP BY id_park, id_shed ORDER BY SUM(v.vote) DESC").list();
+		
+		List<RankedVisit> result = new ArrayList<RankedVisit>();
+		for (Object[] aRow : books) {
+			RankedVisit visit = new RankedVisit();
+			visit.setSum( ((Long)aRow[0]).intValue() );
+			visit.setId_park((Integer)aRow[1]); 
+			visit.setId_shed((Integer)aRow[2]); 
+			result.add(visit);
+		}
+		bookDao.closeCurrentSession();
+		return result;
 	}
 }

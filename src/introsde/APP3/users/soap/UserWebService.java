@@ -9,6 +9,7 @@ import javax.jws.soap.SOAPBinding.Style;
 import javax.jws.soap.SOAPBinding.Use;
 
 import introsde.APP3.users.persistence.entities.PlaceVisited;
+import introsde.APP3.users.persistence.entities.RankedVisit;
 import introsde.APP3.users.persistence.entities.Review;
 import introsde.APP3.users.persistence.entities.User;
 
@@ -16,8 +17,7 @@ import introsde.APP3.users.persistence.entities.User;
 @WebService
 @SOAPBinding(style = Style.DOCUMENT, use=Use.LITERAL) //optional
 public interface UserWebService{
-    @WebMethod String getHelloWorldAsString(String name);
-
+    
 	@WebMethod List<User> getUserList();
 	@WebMethod User addUser(User user);
 	@WebMethod User updateUser(User user);
@@ -42,5 +42,6 @@ public interface UserWebService{
 	@WebMethod void addPlaceVisited(PlaceVisited place, Integer userID);
 	@WebMethod PlaceVisited updatePlaceVisited(PlaceVisited place);
 	@WebMethod PlaceVisited getPlaceVisitedById(Integer id);
+	@WebMethod List<RankedVisit> getMostRankedVisits();
 	
 }
