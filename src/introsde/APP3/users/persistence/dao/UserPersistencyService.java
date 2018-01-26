@@ -17,9 +17,9 @@ public class UserPersistencyService {
 	public static User updateUser(User entity) {
 		bookDao = new UsersDAO();
 		bookDao.openCurrentSessionwithTransaction();
-		User newEntity = bookDao.merge(entity);
+		bookDao.update(entity);
 		bookDao.closeCurrentSessionwithTransaction();
-		return newEntity;
+		return entity;
 	}
 	
 	public static void removeUser(User p) {

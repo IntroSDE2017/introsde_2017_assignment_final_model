@@ -11,6 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -32,6 +33,7 @@ public class User implements Serializable{
 	private Set<Review> reviews;
     @OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.MERGE)
     private Set<PlaceVisited> places;
+    @OneToOne(fetch=FetchType.EAGER, cascade=CascadeType.ALL)
     private Preference preference;
     
     public Integer getId() {
