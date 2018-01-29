@@ -85,6 +85,7 @@ public class UserImpl implements UserWebService{
 	public void addReview(Review review, Integer userID) {
 		User user = getUserById(userID);
 		user.getReviews().add(review);
+		ReviewPersistencyService.saveReview(review);
 		UserPersistencyService.updateUser(user);
 	}
 
@@ -118,6 +119,7 @@ public class UserImpl implements UserWebService{
 	public void addPlaceVisited(PlaceVisited place, Integer userID) {
 		User user = getUserById(userID);
 		user.getPlaces().add(place);
+		PlaceVisitedPersistencyService.savePlaceVisited(place);
 		UserPersistencyService.updateUser(user);
 	}
 
