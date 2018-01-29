@@ -49,7 +49,7 @@ public class ParkPersistencyService {
 	public static List<Park> getAllParksWithName(String name) {
 		bookDao = new ParksDAO();
 		bookDao.openCurrentSession();
-		List<Park> books = (List<Park>) bookDao.getCurrentSession().createQuery("from Park p WHERE p.nome LIKE '%"+name+"%' OR p.comuni LIKE '%"+name+"%'").list();
+		List<Park> books = (List<Park>) bookDao.getCurrentSession().createQuery("from Park p WHERE lower(p.nome) LIKE '%"+name.toLowerCase()+"%' OR lower(p.comuni) LIKE '%"+name.toLowerCase()+"%'").list();
 		bookDao.closeCurrentSession();
 		return books;
 	}

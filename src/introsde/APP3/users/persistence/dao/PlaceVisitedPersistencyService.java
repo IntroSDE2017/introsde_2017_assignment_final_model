@@ -1,9 +1,6 @@
 package introsde.APP3.users.persistence.dao;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
-
-import org.hibernate.query.Query;
 
 import introsde.APP3.users.persistence.entities.PlaceVisited;
 import introsde.APP3.users.persistence.entities.RankedVisit;

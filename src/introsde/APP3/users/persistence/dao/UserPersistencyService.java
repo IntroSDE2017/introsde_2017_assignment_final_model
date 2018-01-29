@@ -48,7 +48,7 @@ public class UserPersistencyService {
 	public static List<User> getUserByName(String name) {
 		bookDao = new UsersDAO();
 		bookDao.openCurrentSession();
-		List<User> books = (List<User>) bookDao.getCurrentSession().createQuery("from User p WHERE p.first_name LIKE '%"+name+"%' OR p.username LIKE '%"+name+"%' ").list();
+		List<User> books = (List<User>) bookDao.getCurrentSession().createQuery("from User p WHERE lower(p.first_name) LIKE '%"+name.toLowerCase()+"%' OR lower(p.username) LIKE '%"+name.toLowerCase()+"%' ").list();
 		bookDao.closeCurrentSession();
 		return books;
 	}

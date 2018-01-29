@@ -1,6 +1,5 @@
 package introsde.APP3.users.persistence.dao;
 import java.util.List;
-import java.util.Set;
 
 import introsde.APP3.users.persistence.entities.Review;
 
