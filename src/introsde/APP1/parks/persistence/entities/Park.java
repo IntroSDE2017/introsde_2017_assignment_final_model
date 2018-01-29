@@ -66,8 +66,8 @@ public class Park implements Serializable{
 		this.nome = nome;
 	}
 	
-	public String getSuperficie() {
-		return nome;
+	public Float getSuperficie() {
+		return superficie;
 	}
 
 	public void setSuperficie(Float superficie) {
