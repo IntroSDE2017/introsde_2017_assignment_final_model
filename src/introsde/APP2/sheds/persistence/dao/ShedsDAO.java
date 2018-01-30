@@ -28,7 +28,9 @@ public enum ShedsDAO {
 
 	public Session openCurrentSessionwithTransaction() {
 		currentSession = currentSessionFactory.getCurrentSession();
-		currentSession.beginTransaction();
+		if(!currentSession.getTransaction().isActive()) {
+			currentSession.beginTransaction();
+		}
 		return currentSession;
 	}
 	
