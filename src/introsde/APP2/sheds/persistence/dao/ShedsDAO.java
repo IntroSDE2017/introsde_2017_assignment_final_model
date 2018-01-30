@@ -11,6 +11,7 @@ import introsde.APP2.sheds.persistence.entities.Shed;
 public class ShedsDAO {
 
 	private Session currentSession;
+	private static SessionFactory currentSessionFactory;
 	
 	private Transaction currentTransaction;
 	
@@ -21,12 +22,12 @@ public class ShedsDAO {
 	}
 
 	public Session openCurrentSession() {
-		currentSession = getSessionFactory().openSession();
+		currentSession = getSessionFactory().getCurrentSession();
 		return currentSession;
 	}
 
 	public Session openCurrentSessionwithTransaction() {
-		currentSession = getSessionFactory().openSession();
+		currentSession = getSessionFactory().getCurrentSession();
 		currentTransaction = currentSession.beginTransaction();
 		return currentSession;
 	}
@@ -41,11 +42,15 @@ public class ShedsDAO {
 	}
 	
 	private static SessionFactory getSessionFactory() {
+		if(currentSessionFactory != null) {
+			return currentSessionFactory;
+		}
 		Configuration configuration = new Configuration().configure(configFile);
 		configuration.addAnnotatedClass(Shed.class);
 		StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
 				.applySettings(configuration.getProperties());
 		SessionFactory sessionFactory = configuration.buildSessionFactory(builder.build());
+		currentSessionFactory = sessionFactory;
 		return sessionFactory;
 	}
 

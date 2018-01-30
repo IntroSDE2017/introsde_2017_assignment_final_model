@@ -24,12 +24,12 @@ public class UsersDAO {
 	}
 
 	public Session openCurrentSession() {
-		currentSession = getSessionFactory().openSession();
+		currentSession = getSessionFactory().getCurrentSession();
 		return currentSession;
 	}
 
 	public Session openCurrentSessionwithTransaction() {
-		currentSession = getSessionFactory().openSession();
+		currentSession = getSessionFactory().getCurrentSession();
 		currentTransaction = currentSession.beginTransaction();
 		return currentSession;
 	}
