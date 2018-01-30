@@ -13,8 +13,6 @@ public enum ShedsDAO {
 	private Session currentSession;
 	private static final SessionFactory currentSessionFactory = getSessionFactory();
 	
-	private Transaction currentTransaction;
-	
 	private final static String configFile = "hibernateAPP2.cfg.xml";
 
 	private ShedsDAO() {
@@ -40,7 +38,7 @@ public enum ShedsDAO {
 	}
 	
 	public void closeCurrentSessionwithTransaction() {
-		currentTransaction.commit();
+		currentSession.getTransaction().commit();
 		currentSession.close();
 		//currentSessionFactory.close();
 	}
