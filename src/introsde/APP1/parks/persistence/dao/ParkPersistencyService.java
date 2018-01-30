@@ -32,25 +32,25 @@ public class ParkPersistencyService {
 	
 	public static Park getParkById(int id) {
 		parkDAO = ParksDAO.getInstance();
-		parkDAO.openCurrentSession();
+		parkDAO.openCurrentSessionwithTransaction();
 		Park book = (Park) parkDAO.getCurrentSession().get(Park.class, id);
-		parkDAO.closeCurrentSession();
+		parkDAO.closeCurrentSessionwithTransaction();
 		return book;
 	}
 	
 	public static List<Park> getAllParks() {
 		parkDAO = ParksDAO.getInstance();
-		parkDAO.openCurrentSession();
+		parkDAO.openCurrentSessionwithTransaction();
 		List<Park> books = (List<Park>) parkDAO.getCurrentSession().createQuery("from Park").list();
-		parkDAO.closeCurrentSession();
+		parkDAO.closeCurrentSessionwithTransaction();
 		return books;
 	}
 
 	public static List<Park> getAllParksWithName(String name) {
 		parkDAO = ParksDAO.getInstance();
-		parkDAO.openCurrentSession();
+		parkDAO.openCurrentSessionwithTransaction();
 		List<Park> books = (List<Park>) parkDAO.getCurrentSession().createQuery("from Park p WHERE lower(p.nome) LIKE '%"+name.toLowerCase()+"%' OR lower(p.comuni) LIKE '%"+name.toLowerCase()+"%'").list();
-		parkDAO.closeCurrentSession();
+		parkDAO.closeCurrentSessionwithTransaction();
 		return books;
 	}
 }
