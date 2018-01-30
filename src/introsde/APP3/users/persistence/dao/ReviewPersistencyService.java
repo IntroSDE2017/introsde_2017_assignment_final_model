@@ -31,33 +31,33 @@ public class ReviewPersistencyService {
 	
 	public static Review getReviewById(int id) {
 		bookDao = UsersDAO.getInstance();
-		bookDao.openCurrentSession();
+		bookDao.openCurrentSessionwithTransaction();
 		Review book = (Review) bookDao.getCurrentSession().get(Review.class, id);
-		bookDao.closeCurrentSession();
+		bookDao.closeCurrentSessionwithTransaction();
 		return book;
 	}
 	
 	public static List<Review> getAllReviews() {
 		bookDao = UsersDAO.getInstance();
-		bookDao.openCurrentSession();
+		bookDao.openCurrentSessionwithTransaction();
 		List<Review> books = (List<Review>) bookDao.getCurrentSession().createQuery("from Review").list();
-		bookDao.closeCurrentSession();
+		bookDao.closeCurrentSessionwithTransaction();
 		return books;
 	}
 	
 	public static List<Review> getAllReviewsForPark(Integer id) {
 		bookDao = UsersDAO.getInstance();
-		bookDao.openCurrentSession();
+		bookDao.openCurrentSessionwithTransaction();
 		List<Review> books = (List<Review>) bookDao.getCurrentSession().createQuery("from Review where id_park='"+id+"'").list();
-		bookDao.closeCurrentSession();
+		bookDao.closeCurrentSessionwithTransaction();
 		return books;
 	}
 	
 	public static List<Review> getAllReviewsForShed(Integer id) {
 		bookDao = UsersDAO.getInstance();
-		bookDao.openCurrentSession();
+		bookDao.openCurrentSessionwithTransaction();
 		List<Review> books = (List<Review>) bookDao.getCurrentSession().createQuery("from Review where id_shed='"+id+"'").list();
-		bookDao.closeCurrentSession();
+		bookDao.closeCurrentSessionwithTransaction();
 		return books;
 	}
 }

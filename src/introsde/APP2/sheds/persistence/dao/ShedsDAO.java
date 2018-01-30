@@ -33,6 +33,7 @@ public enum ShedsDAO {
 		currentSession = getSessionFactory().getCurrentSession();
 		if( currentTransaction==null || !currentTransaction.isActive()) {
 			currentTransaction = currentSession.beginTransaction();
+			currentTransaction.begin();
 		}
 		return currentSession;
 	}

@@ -22,6 +22,7 @@ public enum UsersDAO {
 	private UsersDAO() {
 		
 	}
+	
 	public static UsersDAO getInstance() {
 		return instance;
 	}

@@ -31,25 +31,25 @@ public class UserPersistencyService {
 	
 	public static User getUserById(Integer id) {
 		bookDao = UsersDAO.getInstance();
-		bookDao.openCurrentSession();
+		bookDao.openCurrentSessionwithTransaction();
 		User book = (User) bookDao.getCurrentSession().get(User.class, id);
-		bookDao.closeCurrentSession();
+		bookDao.closeCurrentSessionwithTransaction();
 		return book;
 	}
 	
 	public static List<User> getAllUsers() {
 		bookDao = UsersDAO.getInstance();
-		bookDao.openCurrentSession();
+		bookDao.openCurrentSessionwithTransaction();
 		List<User> books = (List<User>) bookDao.getCurrentSession().createQuery("from User").list();
-		bookDao.closeCurrentSession();
+		bookDao.closeCurrentSessionwithTransaction();
 		return books;
 	}
 
 	public static List<User> getUserByName(String name) {
 		bookDao = UsersDAO.getInstance();
-		bookDao.openCurrentSession();
+		bookDao.openCurrentSessionwithTransaction();
 		List<User> books = (List<User>) bookDao.getCurrentSession().createQuery("from User p WHERE lower(p.first_name) LIKE '%"+name.toLowerCase()+"%' OR lower(p.username) LIKE '%"+name.toLowerCase()+"%' ").list();
-		bookDao.closeCurrentSession();
+		bookDao.closeCurrentSessionwithTransaction();
 		return books;
 	}
 }
