@@ -36,6 +36,7 @@
         <dependency org="org.slf4j" name="slf4j-nop" rev="1.7.25"/>
 		
         <dependency org="org.hibernate" name="hibernate-core" rev="5.2.12.Final"/>
+        <dependency org="org.hibernate" name="hibernate-c3p0" rev="5.2.12.Final"/>
         <dependency org="javax.persistence" name="javax.persistence-api" rev="2.2"/>
         
 		<dependency org="org.postgresql" name="postgresql" rev="42.1.4"/>
