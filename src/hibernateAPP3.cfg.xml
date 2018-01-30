@@ -22,5 +22,9 @@
   <property name="hibernate.c3p0.timeout">3</property>
   <property name="hibernate.c3p0.max_statements">10</property>
   <property name="hibernate.c3p0.idle_test_period">60</property>
+  <property name="hibernate.c3p0.acquireRetryAttempts">1</property>
+  <property name="hibernate.c3p0.acquireRetryDelay">1000</property>
+  <property name="hibernate.connection.release_mode">after_transaction</property>
+  <property name="hibernate.c3p0.maxConnectionAge">40</property>
 </session-factory>
 </hibernate-configuration>
