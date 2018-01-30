@@ -30,20 +30,17 @@
         <dependency org="com.sun.xml.ws" name="jaxws-rt" rev="2.3.0"/>
 	
         <!-- Other dependencies -->
-        <!-- <dependency org="org.xerial" name="sqlite-jdbc" rev="3.20.1"/> -->
         <dependency org="javax.ejb" name="javax.ejb-api" rev="3.2"/>
         
         <dependency org="net.sf.dozer" name="dozer" rev="5.5.1"/>
-        <!--<dependency org="joda-time" name="joda-time" rev="2.4"/>-->
         <dependency org="org.slf4j" name="slf4j-nop" rev="1.7.25"/>
 		
-		<!--PERSISTENCE dependencies ECLIPSE -->
         <dependency org="org.hibernate" name="hibernate-core" rev="5.2.12.Final"/>
         <dependency org="javax.persistence" name="javax.persistence-api" rev="2.2"/>
         
 		<dependency org="org.postgresql" name="postgresql" rev="42.1.4"/>
-		<dependency org="dom4j" name="dom4j" rev="1.6.1"/>
-		<dependency org="com.ibm.icu" name="icu4j" rev="3.8"/>
+		<!--<dependency org="dom4j" name="dom4j" rev="1.6.1"/> -->
+		<dependency org="com.ibm.icu" name="icu4j" rev="60.2"/>
 		
     </dependencies>
 </ivy-module>
