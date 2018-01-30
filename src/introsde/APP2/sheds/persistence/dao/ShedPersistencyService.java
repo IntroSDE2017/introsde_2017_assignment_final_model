@@ -27,30 +27,30 @@ public class ShedPersistencyService {
 		bookDao = new ShedsDAO();
 		bookDao.openCurrentSessionwithTransaction();
 		bookDao.delete(p);
-		bookDao.closeCurrentSessionwithTransaction();
+		bookDao.openCurrentSessionwithTransaction();
 	}
 	
 	public static Shed getShedById(int id) {
 		bookDao = new ShedsDAO();
-		bookDao.openCurrentSession();
+		bookDao.openCurrentSessionwithTransaction();
 		Shed book = (Shed) bookDao.getCurrentSession().get(Shed.class, id);
-		bookDao.closeCurrentSession();
+		bookDao.openCurrentSessionwithTransaction();
 		return book;
 	}
 	
 	public static List<Shed> getAllSheds() {
 		bookDao = new ShedsDAO();
-		bookDao.openCurrentSession();
+		bookDao.openCurrentSessionwithTransaction();
 		List<Shed> books = (List<Shed>) bookDao.getCurrentSession().createQuery("from Shed").list();
-		bookDao.closeCurrentSession();
+		bookDao.openCurrentSessionwithTransaction();
 		return books;
 	}
 
 	public static List<Shed> getShedsByName(String name) {
 		bookDao = new ShedsDAO();
-		bookDao.openCurrentSession();
+		bookDao.openCurrentSessionwithTransaction();
 		List<Shed> books = (List<Shed>) bookDao.getCurrentSession().createQuery("from Shed p WHERE lower(p.comune) LIKE '%"+name.toLowerCase()+"%' OR lower(p.localita) LIKE '%"+name.toLowerCase()+"%' OR lower(p.nome) LIKE '%"+name.toLowerCase()+"%'").list();
-		bookDao.closeCurrentSession();
+		bookDao.openCurrentSessionwithTransaction();
 		return books;
 	}
 }
