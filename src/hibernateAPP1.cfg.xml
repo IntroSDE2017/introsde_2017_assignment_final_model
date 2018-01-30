@@ -16,6 +16,6 @@
    <property name="show_sql">false</property>
    <property name="hibernate.current_session_context_class">thread</property>
    
-   <property name="connection.pool_size">50</property>
+   <property name="connection.pool_size">20</property>
 </session-factory>
 </hibernate-configuration>

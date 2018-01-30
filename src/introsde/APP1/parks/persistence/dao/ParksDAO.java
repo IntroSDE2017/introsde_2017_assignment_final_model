@@ -11,13 +11,21 @@ import introsde.APP1.parks.persistence.entities.Park;
 public class ParksDAO {
 
 	private static final String HIBERNATE_CFG_XML = "hibernateAPP1.cfg.xml";
-
+	private static ParksDAO instance;
+	
 	private Session currentSession;
 	
 	private Transaction currentTransaction;
 
-	public ParksDAO() {
+	private ParksDAO() {
 		
+	}
+	
+	public static ParksDAO getInstance() {
+		if (instance == null) {
+			instance = new ParksDAO();
+		}
+		return instance;
 	}
 
 	public Session openCurrentSession() {
@@ -79,8 +87,8 @@ public class ParksDAO {
 	}
 
 	public Park findById(String id) {
-		Park book = (Park) getCurrentSession().get(Park.class, id);
-		return book; 
+		Park item = (Park) getCurrentSession().get(Park.class, id);
+		return item; 
 	}
 
 	public void delete(Park entity) {
