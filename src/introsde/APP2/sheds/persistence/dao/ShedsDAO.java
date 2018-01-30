@@ -28,7 +28,9 @@ public class ShedsDAO {
 
 	public Session openCurrentSessionwithTransaction() {
 		currentSession = getSessionFactory().getCurrentSession();
-		currentTransaction = currentSession.beginTransaction();
+		if( !currentTransaction.isActive()) {
+			currentTransaction = currentSession.beginTransaction();
+		}
 		return currentSession;
 	}
 	
