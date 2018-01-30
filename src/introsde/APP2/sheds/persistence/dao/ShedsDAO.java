@@ -8,8 +8,8 @@ import org.hibernate.cfg.Configuration;
 
 import introsde.APP2.sheds.persistence.entities.Shed;
 
-public class ShedsDAO {
-
+public enum ShedsDAO {
+	instance;
 	private Session currentSession;
 	private static SessionFactory currentSessionFactory;
 	
@@ -17,8 +17,11 @@ public class ShedsDAO {
 	
 	private final static String configFile = "hibernateAPP2.cfg.xml";
 
-	public ShedsDAO() {
+	private ShedsDAO() {
 		
+	}
+	public static ShedsDAO getInstance() {
+		return instance;
 	}
 
 	public Session openCurrentSession() {
@@ -28,7 +31,7 @@ public class ShedsDAO {
 
 	public Session openCurrentSessionwithTransaction() {
 		currentSession = getSessionFactory().getCurrentSession();
-		if( !currentTransaction.isActive()) {
+		if( currentTransaction==null || !currentTransaction.isActive()) {
 			currentTransaction = currentSession.beginTransaction();
 		}
 		return currentSession;

@@ -11,16 +11,19 @@ import introsde.APP3.users.persistence.entities.Preference;
 import introsde.APP3.users.persistence.entities.Review;
 import introsde.APP3.users.persistence.entities.User;
 
-public class UsersDAO {
-
+public enum UsersDAO {
+	instance;
 	private static final String HIBERNATE_CFG_XML = "hibernateAPP3.cfg.xml";
 
 	private Session currentSession;
 	
 	private Transaction currentTransaction;
 
-	public UsersDAO() {
+	private UsersDAO() {
 		
+	}
+	public static UsersDAO getInstance() {
+		return instance;
 	}
 
 	public Session openCurrentSession() {

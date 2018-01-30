@@ -7,7 +7,7 @@ public class ReviewPersistencyService {
 	private static UsersDAO bookDao;
 
 	public static Review saveReview(Review entity) {
-		bookDao = new UsersDAO();
+		bookDao = UsersDAO.getInstance();
 		bookDao.openCurrentSessionwithTransaction();
 		Review p = bookDao.persist(entity);
 		bookDao.closeCurrentSessionwithTransaction();
@@ -15,7 +15,7 @@ public class ReviewPersistencyService {
 	}
 
 	public static Review updateReview(Review entity) {
-		bookDao = new UsersDAO();
+		bookDao = UsersDAO.getInstance();
 		bookDao.openCurrentSessionwithTransaction();
 		Review newEntity = bookDao.merge(entity);
 		bookDao.closeCurrentSessionwithTransaction();
@@ -23,14 +23,14 @@ public class ReviewPersistencyService {
 	}
 	
 	public static void removeReview(Review p) {
-		bookDao = new UsersDAO();
+		bookDao = UsersDAO.getInstance();
 		bookDao.openCurrentSessionwithTransaction();
 		bookDao.delete(p);
 		bookDao.closeCurrentSessionwithTransaction();
 	}
 	
 	public static Review getReviewById(int id) {
-		bookDao = new UsersDAO();
+		bookDao = UsersDAO.getInstance();
 		bookDao.openCurrentSession();
 		Review book = (Review) bookDao.getCurrentSession().get(Review.class, id);
 		bookDao.closeCurrentSession();
@@ -38,7 +38,7 @@ public class ReviewPersistencyService {
 	}
 	
 	public static List<Review> getAllReviews() {
-		bookDao = new UsersDAO();
+		bookDao = UsersDAO.getInstance();
 		bookDao.openCurrentSession();
 		List<Review> books = (List<Review>) bookDao.getCurrentSession().createQuery("from Review").list();
 		bookDao.closeCurrentSession();
@@ -46,7 +46,7 @@ public class ReviewPersistencyService {
 	}
 	
 	public static List<Review> getAllReviewsForPark(Integer id) {
-		bookDao = new UsersDAO();
+		bookDao = UsersDAO.getInstance();
 		bookDao.openCurrentSession();
 		List<Review> books = (List<Review>) bookDao.getCurrentSession().createQuery("from Review where id_park='"+id+"'").list();
 		bookDao.closeCurrentSession();
@@ -54,7 +54,7 @@ public class ReviewPersistencyService {
 	}
 	
 	public static List<Review> getAllReviewsForShed(Integer id) {
-		bookDao = new UsersDAO();
+		bookDao = UsersDAO.getInstance();
 		bookDao.openCurrentSession();
 		List<Review> books = (List<Review>) bookDao.getCurrentSession().createQuery("from Review where id_shed='"+id+"'").list();
 		bookDao.closeCurrentSession();

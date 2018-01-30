@@ -7,7 +7,7 @@ public class UserPersistencyService {
 	private static UsersDAO bookDao;
 
 	public static User saveUser(User entity) {
-		bookDao = new UsersDAO();
+		bookDao = UsersDAO.getInstance();
 		bookDao.openCurrentSessionwithTransaction();
 		User p = bookDao.persist(entity);
 		bookDao.closeCurrentSessionwithTransaction();
@@ -15,7 +15,7 @@ public class UserPersistencyService {
 	}
 
 	public static User updateUser(User entity) {
-		bookDao = new UsersDAO();
+		bookDao = UsersDAO.getInstance();
 		bookDao.openCurrentSessionwithTransaction();
 		bookDao.update(entity);
 		bookDao.closeCurrentSessionwithTransaction();
@@ -23,14 +23,14 @@ public class UserPersistencyService {
 	}
 	
 	public static void removeUser(User p) {
-		bookDao = new UsersDAO();
+		bookDao = UsersDAO.getInstance();
 		bookDao.openCurrentSessionwithTransaction();
 		bookDao.delete(p);
 		bookDao.closeCurrentSessionwithTransaction();
 	}
 	
 	public static User getUserById(Integer id) {
-		bookDao = new UsersDAO();
+		bookDao = UsersDAO.getInstance();
 		bookDao.openCurrentSession();
 		User book = (User) bookDao.getCurrentSession().get(User.class, id);
 		bookDao.closeCurrentSession();
@@ -38,7 +38,7 @@ public class UserPersistencyService {
 	}
 	
 	public static List<User> getAllUsers() {
-		bookDao = new UsersDAO();
+		bookDao = UsersDAO.getInstance();
 		bookDao.openCurrentSession();
 		List<User> books = (List<User>) bookDao.getCurrentSession().createQuery("from User").list();
 		bookDao.closeCurrentSession();
@@ -46,7 +46,7 @@ public class UserPersistencyService {
 	}
 
 	public static List<User> getUserByName(String name) {
-		bookDao = new UsersDAO();
+		bookDao = UsersDAO.getInstance();
 		bookDao.openCurrentSession();
 		List<User> books = (List<User>) bookDao.getCurrentSession().createQuery("from User p WHERE lower(p.first_name) LIKE '%"+name.toLowerCase()+"%' OR lower(p.username) LIKE '%"+name.toLowerCase()+"%' ").list();
 		bookDao.closeCurrentSession();

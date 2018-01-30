@@ -9,7 +9,7 @@ public class PlaceVisitedPersistencyService {
 	private static UsersDAO bookDao;
 
 	public static PlaceVisited savePlaceVisited(PlaceVisited entity) {
-		bookDao = new UsersDAO();
+		bookDao = UsersDAO.getInstance();
 		bookDao.openCurrentSessionwithTransaction();
 		PlaceVisited p = bookDao.persist(entity);
 		bookDao.closeCurrentSessionwithTransaction();
@@ -17,7 +17,7 @@ public class PlaceVisitedPersistencyService {
 	}
 
 	public static PlaceVisited updatePlaceVisited(PlaceVisited entity) {
-		bookDao = new UsersDAO();
+		bookDao = UsersDAO.getInstance();
 		bookDao.openCurrentSessionwithTransaction();
 		PlaceVisited newEntity = bookDao.merge(entity);
 		bookDao.closeCurrentSessionwithTransaction();
@@ -25,14 +25,14 @@ public class PlaceVisitedPersistencyService {
 	}
 	
 	public static void removePlaceVisited(PlaceVisited p) {
-		bookDao = new UsersDAO();
+		bookDao = UsersDAO.getInstance();
 		bookDao.openCurrentSessionwithTransaction();
 		bookDao.delete(p);
 		bookDao.closeCurrentSessionwithTransaction();
 	}
 	
 	public static PlaceVisited getPlaceVisitedById(int id) {
-		bookDao = new UsersDAO();
+		bookDao = UsersDAO.getInstance();
 		bookDao.openCurrentSession();
 		PlaceVisited book = (PlaceVisited) bookDao.getCurrentSession().get(PlaceVisited.class, id);
 		bookDao.closeCurrentSession();
@@ -40,7 +40,7 @@ public class PlaceVisitedPersistencyService {
 	}
 	
 	public static List<PlaceVisited> getAllPlacesVisited() {
-		bookDao = new UsersDAO();
+		bookDao = UsersDAO.getInstance();
 		bookDao.openCurrentSession();
 		List<PlaceVisited> books = (List<PlaceVisited>) bookDao.getCurrentSession().createQuery("from PlaceVisited").list();
 		bookDao.closeCurrentSession();
@@ -48,7 +48,7 @@ public class PlaceVisitedPersistencyService {
 	}
 	
 	public static List<PlaceVisited> getAllPlacesVisitedForPark(Integer id) {
-		bookDao = new UsersDAO();
+		bookDao = UsersDAO.getInstance();
 		bookDao.openCurrentSession();
 		List<PlaceVisited> books = (List<PlaceVisited>) bookDao.getCurrentSession().createQuery("from PlaceVisited where id_park='"+id+"'").list();
 		bookDao.closeCurrentSession();
@@ -56,7 +56,7 @@ public class PlaceVisitedPersistencyService {
 	}
 	
 	public static List<PlaceVisited> getAllPlacesVisitedForShed(Integer id) {
-		bookDao = new UsersDAO();
+		bookDao = UsersDAO.getInstance();
 		bookDao.openCurrentSession();
 		List<PlaceVisited> books = (List<PlaceVisited>) bookDao.getCurrentSession().createQuery("from PlaceVisited where id_shed='"+id+"'").list();
 		bookDao.closeCurrentSession();
@@ -64,7 +64,7 @@ public class PlaceVisitedPersistencyService {
 	}
 	
 	public static List<RankedVisit> getMostRatedVisits() {
-		bookDao = new UsersDAO();
+		bookDao = UsersDAO.getInstance();
 		bookDao.openCurrentSession();
 		
 		List<Object[]> books = (List<Object[]>) bookDao.getCurrentSession().createQuery("SELECT SUM(v.vote) as sum, v.id_park as id_park, v.id_shed as id_shed FROM PlaceVisited v GROUP BY id_park, id_shed ORDER BY SUM(v.vote) DESC").list();
