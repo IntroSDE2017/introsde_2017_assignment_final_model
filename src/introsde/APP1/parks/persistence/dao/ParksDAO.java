@@ -2,7 +2,6 @@ package introsde.APP1.parks.persistence.dao;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
@@ -10,11 +9,10 @@ import introsde.APP1.parks.persistence.entities.Park;
 
 public enum ParksDAO {
 	instance;
-	private static final String HIBERNATE_CFG_XML = "hibernateAPP1.cfg.xml";
-	
 	private Session currentSession;
+	private static final SessionFactory currentSessionFactory = getSessionFactory();
 	
-	private Transaction currentTransaction;
+	private static final String HIBERNATE_CFG_XML = "hibernateAPP1.cfg.xml";
 
 	private ParksDAO() {
 		
@@ -25,13 +23,16 @@ public enum ParksDAO {
 	}
 
 	public Session openCurrentSession() {
-		currentSession = getSessionFactory().getCurrentSession();
+		currentSession = currentSessionFactory.getCurrentSession();
 		return currentSession;
 	}
 
 	public Session openCurrentSessionwithTransaction() {
-		currentSession = getSessionFactory().getCurrentSession();
-		currentTransaction = currentSession.beginTransaction();
+		currentSession = currentSessionFactory.getCurrentSession();
+		
+		if(!currentSession.getTransaction().isActive()) {
+			currentSession.beginTransaction();
+		}
 		return currentSession;
 	}
 	
@@ -40,7 +41,7 @@ public enum ParksDAO {
 	}
 	
 	public void closeCurrentSessionwithTransaction() {
-		currentTransaction.commit();
+		currentSession.getTransaction().commit();
 		currentSession.close();
 	}
 	
@@ -59,14 +60,6 @@ public enum ParksDAO {
 
 	public void setCurrentSession(Session currentSession) {
 		this.currentSession = currentSession;
-	}
-
-	public Transaction getCurrentTransaction() {
-		return currentTransaction;
-	}
-
-	public void setCurrentTransaction(Transaction currentTransaction) {
-		this.currentTransaction = currentTransaction;
 	}
 	
 	public Park persist(Park entity) {

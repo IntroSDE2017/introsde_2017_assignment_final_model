@@ -12,11 +12,12 @@ public enum ShedsDAO {
 	private Session currentSession;
 	private static final SessionFactory currentSessionFactory = getSessionFactory();
 	
-	private final static String configFile = "hibernateAPP2.cfg.xml";
+	private final static String HIBERNATE_CFG_XML = "hibernateAPP2.cfg.xml";
 
 	private ShedsDAO() {
 		
 	}
+	
 	public static ShedsDAO getInstance() {
 		return instance;
 	}
@@ -28,6 +29,7 @@ public enum ShedsDAO {
 
 	public Session openCurrentSessionwithTransaction() {
 		currentSession = currentSessionFactory.getCurrentSession();
+		
 		if(!currentSession.getTransaction().isActive()) {
 			currentSession.beginTransaction();
 		}
@@ -41,11 +43,10 @@ public enum ShedsDAO {
 	public void closeCurrentSessionwithTransaction() {
 		currentSession.getTransaction().commit();
 		currentSession.close();
-		//currentSessionFactory.close();
 	}
 	
 	private static SessionFactory getSessionFactory() {
-		Configuration configuration = new Configuration().configure(configFile);
+		Configuration configuration = new Configuration().configure(HIBERNATE_CFG_XML);
 		configuration.addAnnotatedClass(Shed.class);
 		StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
 				.applySettings(configuration.getProperties());

@@ -2,7 +2,6 @@ package introsde.APP3.users.persistence.dao;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
@@ -13,11 +12,10 @@ import introsde.APP3.users.persistence.entities.User;
 
 public enum UsersDAO {
 	instance;
-	private static final String HIBERNATE_CFG_XML = "hibernateAPP3.cfg.xml";
-
 	private Session currentSession;
+	private static final SessionFactory currentSessionFactory = getSessionFactory();
 	
-	private Transaction currentTransaction;
+	private static final String HIBERNATE_CFG_XML = "hibernateAPP3.cfg.xml";
 
 	private UsersDAO() {
 		
@@ -28,13 +26,16 @@ public enum UsersDAO {
 	}
 
 	public Session openCurrentSession() {
-		currentSession = getSessionFactory().getCurrentSession();
+		currentSession = currentSessionFactory.getCurrentSession();
 		return currentSession;
 	}
 
 	public Session openCurrentSessionwithTransaction() {
-		currentSession = getSessionFactory().getCurrentSession();
-		currentTransaction = currentSession.beginTransaction();
+		currentSession = currentSessionFactory.getCurrentSession();
+		
+		if(!currentSession.getTransaction().isActive()) {
+			currentSession.beginTransaction();
+		}
 		return currentSession;
 	}
 	
@@ -43,7 +44,7 @@ public enum UsersDAO {
 	}
 	
 	public void closeCurrentSessionwithTransaction() {
-		currentTransaction.commit();
+		currentSession.getTransaction().commit();
 		currentSession.close();
 	}
 	
@@ -65,14 +66,6 @@ public enum UsersDAO {
 
 	public void setCurrentSession(Session currentSession) {
 		this.currentSession = currentSession;
-	}
-
-	public Transaction getCurrentTransaction() {
-		return currentTransaction;
-	}
-
-	public void setCurrentTransaction(Transaction currentTransaction) {
-		this.currentTransaction = currentTransaction;
 	}
 	
 	public User persist(User entity) {
