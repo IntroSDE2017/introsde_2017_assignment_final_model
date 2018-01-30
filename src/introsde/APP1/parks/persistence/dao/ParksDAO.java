@@ -8,10 +8,9 @@ import org.hibernate.cfg.Configuration;
 
 import introsde.APP1.parks.persistence.entities.Park;
 
-public class ParksDAO {
-
+public enum ParksDAO {
+	instance;
 	private static final String HIBERNATE_CFG_XML = "hibernateAPP1.cfg.xml";
-	private static ParksDAO instance;
 	
 	private Session currentSession;
 	
@@ -22,9 +21,6 @@ public class ParksDAO {
 	}
 	
 	public static ParksDAO getInstance() {
-		if (instance == null) {
-			instance = new ParksDAO();
-		}
 		return instance;
 	}
 
