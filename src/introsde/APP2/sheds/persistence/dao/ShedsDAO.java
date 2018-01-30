@@ -2,7 +2,6 @@ package introsde.APP2.sheds.persistence.dao;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 
@@ -59,14 +58,6 @@ public enum ShedsDAO {
 
 	public void setCurrentSession(Session currentSession) {
 		this.currentSession = currentSession;
-	}
-
-	public Transaction getCurrentTransaction() {
-		return currentTransaction;
-	}
-
-	public void setCurrentTransaction(Transaction currentTransaction) {
-		this.currentTransaction = currentTransaction;
 	}
 	
 	public void persist(Shed entity) {
