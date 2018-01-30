@@ -43,6 +43,7 @@
         
 		<dependency org="org.postgresql" name="postgresql" rev="42.1.4"/>
 		<dependency org="dom4j" name="dom4j" rev="1.6.1"/>
+		<dependency org="com.ibm.icu" name="icu4j" rev="3.8"/>
 		
     </dependencies>
 </ivy-module>

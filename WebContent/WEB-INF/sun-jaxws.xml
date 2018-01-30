@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints
+  xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime"
+  version="2.0">
+  <endpoint
+      name="APP_1"
+      implementation="introsde.APP1.parks.soap.ParkImpl"
+      url-pattern="/parks"/>
+  <endpoint
+      name="APP_2"
+      implementation="introsde.APP2.sheds.soap.ShedImpl"
+      url-pattern="/sheds"/>
+  <endpoint
+      name="APP_3"
+      implementation="introsde.APP3.users.soap.UserImpl"
+      url-pattern="/users"/>
+</endpoints>
